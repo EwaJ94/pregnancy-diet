@@ -1,0 +1,46 @@
+.search-text {
+    width: 60rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 3rem;
+    
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.input-text {
+    width: 35rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0 0.7rem;
+    font-size: 1rem;
+    color: #26010B;
+    box-shadow: 0.5rem 0.5rem 2rem #b92c6e;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.find {
+    width: 6rem;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+    background-color: #BF045B;
+    color: #26010B;
+    box-shadow: 0.5rem 0.5rem 2rem #b92c6e;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.find:hover {
+    background-color: #26010B;
+    color: #BF045B;
+    border: 0.2rem solid #BF045B;
+}
+
