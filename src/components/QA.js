@@ -1,24 +1,28 @@
-import "./Question.css"
+import "./QA.css"
+import pregnantlady from "../icons/pregnantlady.png"
 import projectFirestore  from "../firebase/config"
 import {useState, useEffect} from "react"
 // import useParams from "react-router-dom"
 
-const Question = () => {
+const QA = () => {
   const [search, setSearch] = useState("")
+  const [find, setFind] = useState({})
   const [data, setData] = useState([])
   const [error, setError] = useState (false)
 
   // const { foodId } = useParams()
 
   useEffect ( () => {
-    projectFirestore.collection("jídlo").get().then((document) =>{
-      if(document.exists){
-        setData(document.data())
-      }else{setError("Nenalezená potravina")}
+    projectFirestore.collection("jidlo").get().then((snapshot) =>{
+      let result = []
+      snapshot.docs.forEach( (oneFood) => {
+        result.push ( {id: oneFood.id, ...oneFood.data()})
+      })
+      setData(result)
     }).catch((err) => {
       setError(err.message)
-    },[])
-  })
+    })
+  },[])
 
   const formSubmit = (e) => {
     e.preventDefault()
@@ -28,12 +32,7 @@ const Question = () => {
   }
 
   return <div>
-    {error && <p>{error}</p>}
-    {data.map( (oneFood) => {
-      const {id, název, popis} = oneFood
-    
-    
-      return <div key={id}>
+    <section className="question">
       <form className="search-text" 
       onSubmit={formSubmit}> 
 
@@ -49,11 +48,20 @@ const Question = () => {
       value="Hledat" 
       className="find"/>
     </form>
+  </section>
+  <section>
+    {error && <p>{error}</p>}
+    {data.map ( (oneFood) => {
+      const {id,název,popis} = oneFood
 
-    <h2>{název}</h2>
-    <p>{popis}</p>
+      return <div key={id}>
+      <h2>{název}</h2>
+      <p>{popis}</p>
     </div>
-})}
-  </div>
+    })}
+  </section>
+  <img src={pregnantlady} alt="pregnant-lady" className="pregnant-lady"/>
+</div>
+ 
 }
-export default Question
+export default QA
