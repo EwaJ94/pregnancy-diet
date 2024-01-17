@@ -19,13 +19,22 @@ const QA = () => {
         result.push ( {id: oneFood.id, ...oneFood.data()})
       })
       setData(result)
+      console.log(result);
     }).catch((err) => {
       setError(err.message)
     })
-  },[])
+
+  
+}, [search])
+
 
   const formSubmit = (e) => {
     e.preventDefault()
+
+  //   const findFood = data.filter( (oneFood) => {
+  //     return oneFood.název.toLowerCase().includes(search.toLowerCase())
+  // })
+  // setFind(findFood)
 
     console.log(search);
     setSearch("")
@@ -51,7 +60,7 @@ const QA = () => {
   </section>
   <section>
     {error && <p>{error}</p>}
-    {data.map ( (oneFood) => {
+    {find.map ( (oneFood) => {
       const {id,název,popis} = oneFood
 
       return <div key={id}>
