@@ -6,7 +6,7 @@ import {useState, useEffect} from "react"
 
 const QA = () => {
   const [search, setSearch] = useState("")
-  const [find, setFind] = useState({})
+  const [find, setFind] = useState([])
   const [data, setData] = useState([])
   const [error, setError] = useState (false)
 
@@ -25,17 +25,26 @@ const QA = () => {
     })
 
   
-}, [search])
+}, [])
+
+
 
 
   const formSubmit = (e) => {
     e.preventDefault()
 
-  //   const findFood = data.filter( (oneFood) => {
-  //     return oneFood.název.toLowerCase().includes(search.toLowerCase())
-  // })
-  // setFind(findFood)
+    const findFood = data.filter( (oneFood) => {
+      return oneFood.název.toLowerCase().includes(search.toLowerCase())
+      }
+  )
+  //     console.log(findFood);
+  // if (findFood.název.toLowerCase().includes(search.toLowerCase())){
+  //   setFind(findFood)
+  // } else {
+  //   return <p>Potravina nenalezena, zkuste zadat obecný název.</p>
+  // }
 
+  console.log(find)
     console.log(search);
     setSearch("")
   }
