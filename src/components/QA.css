@@ -49,8 +49,9 @@ input {
 .result {
     display: flex;
     flex-direction: column;
-    margin: 1rem 3rem;
-    height: 18rem;
+    margin: 0.5rem 3rem;
+    height: 20rem;
+    width: 51rem;
     overflow:auto;
 }
 
@@ -68,10 +69,10 @@ p {
 
 .pregnant-lady {
     position: absolute;
-    bottom: 2rem;
-    right: 2.5rem;
-    width: 10rem;
-    height: 10rem;
+    bottom: 1rem;
+    right: -1rem;
+    width: 8rem;
+    height: 8rem;
     opacity: 0.2;
     
   }
