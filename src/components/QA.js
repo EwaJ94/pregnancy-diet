@@ -37,6 +37,16 @@ const QA = () => {
       return oneFood.název.toLowerCase().includes(search.toLowerCase())
       }
   )
+  setFind(findFood)
+
+console.log(findFood)
+
+      if (find.length === 0) {
+        <p>Potravina nenalezena, zkuste zadat obecný název.</p>
+      } else {
+        return find
+      }
+     
   //     console.log(findFood);
   // if (findFood.název.toLowerCase().includes(search.toLowerCase())){
   //   setFind(findFood)
@@ -66,15 +76,16 @@ const QA = () => {
       value="Hledat" 
       className="find"/>
     </form>
+    
   </section>
-  <section>
+  <section className="result">
     {error && <p>{error}</p>}
     {find.map ( (oneFood) => {
       const {id,název,popis} = oneFood
 
-      return <div key={id}>
-      <h2>{název}</h2>
-      <p>{popis}</p>
+      return <div key={id} >
+        <h2>{název}</h2>
+        <p>{popis}</p>
     </div>
     })}
   </section>

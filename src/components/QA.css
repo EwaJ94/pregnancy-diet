@@ -44,24 +44,32 @@ input {
     border: 0.2rem solid #BF045B;
 }
 
-.answer-section {
+
+
+.result {
     display: flex;
-    flex-direction: row;
-    margin: 2rem 3rem;
+    flex-direction: column;
+    margin: 1rem 3rem;
     height: 18rem;
-    
+    overflow:auto;
+}
+
+h2 {
+    color: #26010B;
+    margin-left: 3rem;
+    text-decoration: underline;
 }
 
 p {
     font-family:Arial, Helvetica, sans-serif;
-    margin: 0 5rem 2rem 3rem;
-
+    margin: 0 5.5rem 2rem 3rem;
+    color: #26010B;
 }
 
 .pregnant-lady {
     position: absolute;
     bottom: 2rem;
-    right: 0rem;
+    right: 2.5rem;
     width: 10rem;
     height: 10rem;
     opacity: 0.2;
