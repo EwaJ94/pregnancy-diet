@@ -1,17 +1,14 @@
 import "./Category.css"
-import projectFirestore  from "../firebase/config"
 
-const Category = () => {
+const Category = (props) => {
 
-  const listOfDrinks = () => {
-    
-  }
+  
 
   return <menu>
     <ul>
-      <li onClick={() => listOfDrinks()}>Nápoje</li>
-      <li>Potraviny</li>
-      <li>Ostatní</li>
+      <li onClick={props.showDrinks}>Nápoje</li>
+      <li onClick={props.showFood}>Potraviny</li>
+      <li onClick={props.showOthers}>Ostatní</li>
     </ul>
   </menu>
 }
