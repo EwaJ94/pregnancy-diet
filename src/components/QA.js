@@ -1,16 +1,23 @@
 import "./QA.css"
 import pregnantlady from "../icons/pregnantlady.png"
 import {useState} from "react"
+import data from "../App"
 
-
-const QA = (props) => {
+const QA = () => {
   const [search, setSearch] = useState("")
-
+  const [find, setFind] = useState([])
+  
   const formSubmit = (e) => {
     e.preventDefault()
 
+    const findFood = data.filter( (oneFood) => {
+      return oneFood.název.toLowerCase().includes(search.toLowerCase())
+  })
+
+    setFind(findFood)
+    
   }
-  
+ 
 
   return <div>
     <section className="question">
@@ -20,7 +27,7 @@ const QA = (props) => {
       <input 
       type="text" 
       className="input-text" 
-      // value = {search}
+      value = {search}
       onChange={ (e) => setSearch(e.target.value)} 
       title="Pro přesnější vyhledávání v databázi, napište obecný název potraviny (np. místo hermelín napište sýr)." />
 
@@ -28,7 +35,8 @@ const QA = (props) => {
       type="submit" 
       value="Hledat" 
       className="find"
-      onSubmit={props.findFood}/>
+      
+      />
     </form>
     
   </section>

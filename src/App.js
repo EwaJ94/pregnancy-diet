@@ -1,12 +1,12 @@
 import Category from "./components/Category"
 import QA from "./components/QA"
-import projectFirestore  from "../firebase/config"
+import projectFirestore  from "./firebase/config"
 import {useState, useEffect} from "react"
 
 
 const App = () => {
   
-  const [find, setFind] = useState([])
+  
   const [data, setData] = useState([])
   const [error, setError] = useState(false)
 
@@ -17,22 +17,18 @@ const App = () => {
         result.push ( {id: oneFood.id, ...oneFood.data()})
       })
       setData(result)
-      console.log(result);
+      
     }).catch((err) => {
       setError(err.message)
     })
 }, [])
 
-const findFood = data.filter( (oneFood) => {
-  return oneFood.název.toLowerCase().includes(search.toLowerCase())
-  })
-  setFind(findFood)
 
-  if (find.length === 0) {
-    <p>Potravina nenalezena, zkuste zadat obecný název.</p>
-  } else {
-    return find
-  }
+  // if (find.length === 0) {
+  //   <p>Potravina nenalezena, zkuste zadat obecný název.</p>
+  // } else {
+  //   return find
+  // }
 
        
   //     console.log(findFood);
@@ -43,7 +39,7 @@ const findFood = data.filter( (oneFood) => {
   // }
 
   
-}
+
   const showDrinks = () => {
     data.filter( (oneDrink) => {
       return oneDrink.typ.includes("nápoj")
@@ -54,16 +50,16 @@ const findFood = data.filter( (oneFood) => {
       return oneFood.typ.includes("potraviny")
       })}
 
-  const showOthers = () => {
-    data.filter( (oneOther) => {
-      return oneOther.typ.includes("ostatní")
-      })
+  // const showOthers = () => {
+  //   data.filter( (oneOther) => {
+  //     return oneOther.typ.includes("ostatní")
+  //     })
 
   return <section className="container"> 
     {error && <p>{error}</p>}
-    <Category showDrinks={showDrinks} showFood={showFood} showOthers={showOthers}/>
-    <QA findFood={findFood}/>
-   
+    <Category showDrinks={showDrinks} showFood={showFood} />
+    <QA/>
+    {/* showOthers={showOthers} */}
     
   </section>
 }

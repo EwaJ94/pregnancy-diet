@@ -2,8 +2,6 @@ import "./Category.css"
 
 const Category = (props) => {
 
-  
-
   return <menu>
     <ul>
       <li onClick={props.showDrinks}>Nápoje</li>
