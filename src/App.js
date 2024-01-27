@@ -5,10 +5,13 @@ import {useState, useEffect} from "react"
 
 
 const App = () => {
-  
+
   
   const [data, setData] = useState([])
   const [error, setError] = useState(false)
+  const [drinks, setDrinks] = useState([])
+  const [foods, setFoods] = useState([])
+  const [others, setOthers] = useState([])
 
   useEffect ( () => {
     projectFirestore.collection("jidlo").get().then((snapshot) =>{
@@ -39,27 +42,38 @@ const App = () => {
   // }
 
   
-
+  console.log(data)
   const showDrinks = () => {
-    data.filter( (oneDrink) => {
+    const finalDrinks = data.filter((oneDrink) => {
       return oneDrink.typ.includes("nápoj")
-      })}
+    })
+    setDrinks(finalDrinks);
+  }
+  
       
-  const showFood = () => {
-    data.filter( (oneFood) => {
+  const showFoods = () => {
+    const finalFoods = data.filter((oneFood) => {
       return oneFood.typ.includes("potraviny")
-      })}
+    })
+    setFoods(finalFoods);
+  }
+  console.log(foods);
 
-  // const showOthers = () => {
-  //   data.filter( (oneOther) => {
-  //     return oneOther.typ.includes("ostatní")
-  //     })
+  const showOthers = () => {
+    const finalOthers = data.filter((oneOther) => {
+      return oneOther.typ.includes("ostatní")
+    })
+    setOthers(finalOthers);
+  }
+  console.log(others);
 
   return <section className="container"> 
     {error && <p>{error}</p>}
-    <Category showDrinks={showDrinks} showFood={showFood} />
+    
+    <Category showDrinks={showDrinks} showFoods={showFoods} showOthers={showOthers}/>
     <QA/>
-    {/* showOthers={showOthers} */}
+    
+    
     
   </section>
 }

@@ -44,29 +44,6 @@ input {
     border: 0.2rem solid #BF045B;
 }
 
-
-
-.result {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem 3rem;
-    height: 20rem;
-    width: 51rem;
-    overflow:auto;
-}
-
-h2 {
-    color: #26010B;
-    margin-left: 3rem;
-    text-decoration: underline;
-}
-
-p {
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0 5.5rem 2rem 3rem;
-    color: #26010B;
-}
-
 .pregnant-lady {
     position: absolute;
     bottom: 1rem;
@@ -76,4 +53,6 @@ p {
     opacity: 0.2;
     
   }
+
+
 
