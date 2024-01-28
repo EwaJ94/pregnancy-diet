@@ -41,8 +41,7 @@ const App = () => {
   //   return <p>Potravina nenalezena, zkuste zadat obecný název.</p>
   // }
 
-  
-  console.log(data)
+
   const showDrinks = () => {
     const finalDrinks = data.filter((oneDrink) => {
       return oneDrink.typ.includes("nápoj")
@@ -50,31 +49,57 @@ const App = () => {
     setDrinks(finalDrinks);
   }
   
-      
   const showFoods = () => {
     const finalFoods = data.filter((oneFood) => {
       return oneFood.typ.includes("potraviny")
     })
     setFoods(finalFoods);
   }
-  console.log(foods);
-
+  
   const showOthers = () => {
     const finalOthers = data.filter((oneOther) => {
       return oneOther.typ.includes("ostatní")
     })
     setOthers(finalOthers);
   }
-  console.log(others);
 
   return <section className="container"> 
     {error && <p>{error}</p>}
-    
     <Category showDrinks={showDrinks} showFoods={showFoods} showOthers={showOthers}/>
     <QA/>
-    
-    
-    
+
+  <div className="result">
+    {drinks.map ( (oneDrink) => {
+      const {id, název, popis } = oneDrink
+
+      return <div key={id} >
+      <h2>{název}</h2>
+      <p>{popis}</p>
+  </div>
+    })}
+    </div>
+
+    <div className="result">
+    {foods.map ( (oneFood) => {
+      const {id, název, popis } = oneFood
+
+      return <div key={id} >
+      <h2>{název}</h2>
+      <p>{popis}</p>
+  </div>
+    })}
+    </div>
+
+    <div className="result">
+  {others.map ( (oneOther) => {
+      const {id, název, popis } = oneOther
+
+      return <div key={id} >
+      <h2>{název}</h2>
+      <p>{popis}</p>
+  </div>
+    })}
+    </div>
   </section>
 }
 
