@@ -1,9 +1,9 @@
 import "./QA.css"
 import pregnantlady from "../icons/pregnantlady.png"
 import {useState} from "react"
-import data from "../App"
 
-const QA = () => {
+
+const QA = ({data}) => {
   const [search, setSearch] = useState("")
   const [find, setFind] = useState([])
   
@@ -15,7 +15,8 @@ const QA = () => {
   })
 
     setFind(findFood)
-    
+    setSearch("")
+    console.log(findFood);
   }
  
 
@@ -40,7 +41,7 @@ const QA = () => {
     </form>
     
   </section>
-  <section className="result">
+  <section className="search-result">
     
     {find.map ( (oneFood) => {
       const {id,název,popis} = oneFood

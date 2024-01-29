@@ -44,6 +44,26 @@ input {
     border: 0.2rem solid #BF045B;
 }
 
+.search-result{
+    width: 48rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin: 0.5rem 6rem;
+    
+}
+
+.search-result h2 {
+    color: #26010B;
+    text-decoration: underline;
+  }
+  
+.search-result p {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #26010B;
+  }
+
 .pregnant-lady {
     position: absolute;
     bottom: 1rem;

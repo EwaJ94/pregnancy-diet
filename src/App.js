@@ -43,6 +43,8 @@ const App = () => {
 
 
   const showDrinks = () => {
+    setFoods([])
+    setOthers([])
     const finalDrinks = data.filter((oneDrink) => {
       return oneDrink.typ.includes("nápoj")
     })
@@ -50,6 +52,8 @@ const App = () => {
   }
   
   const showFoods = () => {
+    setDrinks([])
+    setOthers([])
     const finalFoods = data.filter((oneFood) => {
       return oneFood.typ.includes("potraviny")
     })
@@ -57,6 +61,8 @@ const App = () => {
   }
   
   const showOthers = () => {
+    setDrinks([])
+    setFoods([])
     const finalOthers = data.filter((oneOther) => {
       return oneOther.typ.includes("ostatní")
     })
@@ -66,7 +72,7 @@ const App = () => {
   return <section className="container"> 
     {error && <p>{error}</p>}
     <Category showDrinks={showDrinks} showFoods={showFoods} showOthers={showOthers}/>
-    <QA/>
+    <QA data={data}/>
 
   <div className="result">
     {drinks.map ( (oneDrink) => {
