@@ -23,10 +23,11 @@ body {
 
 .result {
   width: 48rem;
+  height: 18rem;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  margin: 0.5rem 6rem;
+  overflow-y:auto;
+  margin: 0 6rem;
 }
 
 .result h2 {

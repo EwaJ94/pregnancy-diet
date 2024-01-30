@@ -48,7 +48,7 @@ input {
     width: 48rem;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin: 0.5rem 6rem;
     
 }
@@ -71,7 +71,6 @@ input {
     width: 8rem;
     height: 8rem;
     opacity: 0.2;
-    
   }
 
 
