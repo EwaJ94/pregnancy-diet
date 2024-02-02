@@ -38,7 +38,7 @@ const QA = ({data}) => {
       className="input-text" 
       value = {search}
       onChange={ (e) => setSearch(e.target.value)} 
-      title="Pro přesnější vyhledávání v databázi, napište obecný název potraviny (np. místo hermelín napište sýr)." />
+       />
 
       <input 
       type="submit" 

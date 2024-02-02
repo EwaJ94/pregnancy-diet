@@ -1,0 +1,39 @@
+.welcome-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25rem;
+    width: 53rem;
+    background-color: #d369ae;
+    border-radius: 1rem;
+    
+}
+
+.welcome-window h2 {
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.welcome-window p {
+    margin: 2rem 5rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.welcome-window img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.welcome-window img:hover {
+    transform: scale(1.15);
+}
