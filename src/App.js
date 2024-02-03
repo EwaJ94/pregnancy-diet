@@ -1,6 +1,5 @@
 import Category from "./components/Category"
 import QA from "./components/QA"
-import Welcome from "./components/Welcome"
 import projectFirestore  from "./firebase/config"
 import {useState, useEffect} from "react"
 
@@ -53,7 +52,6 @@ const App = () => {
 
   return <section className="container"> 
     {error && <p>{error}</p>}
-    <Welcome />
     <Category showDrinks={showDrinks} showFoods={showFoods} showOthers={showOthers}/>
     <QA data={data}/>
 

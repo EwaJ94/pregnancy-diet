@@ -9,14 +9,14 @@ const QA = ({data}) => {
   
   const formSubmit = (e) => {
     e.preventDefault()
-
+    
     setError("")
     setSearch("")
     
     const findFood = data.filter( (oneFood) => {
       return oneFood.název.toLowerCase().includes(search.toLowerCase())
   })
-    
+  
     setFind(findFood)
     
     if (findFood.length === 0) {
@@ -38,7 +38,7 @@ const QA = ({data}) => {
       className="input-text" 
       value = {search}
       onChange={ (e) => setSearch(e.target.value)} 
-       />
+      placeholder="Zadejte obecný název potraviny (np. místo hermelín, zadejte sýr)." />
 
       <input 
       type="submit" 
