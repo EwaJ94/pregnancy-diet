@@ -3,7 +3,7 @@ menu {
     padding-left: 0;
     margin: 1rem 0 0;
     display: flex;
-
+    
 }
 
 menu ul {
@@ -11,8 +11,8 @@ menu ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
 }
+
 menu ul li {
     list-style-type: none;
     cursor: pointer;
@@ -24,3 +24,18 @@ menu ul li:hover {
     text-decoration: underline;
     color: #BF045B;
 }
+
+@media screen and (max-width: 980px){
+    menu ul {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 570px){
+    menu ul {
+        width: 45%;
+    }
+
+}
+

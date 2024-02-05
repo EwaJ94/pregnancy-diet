@@ -38,7 +38,7 @@ const QA = ({data}) => {
       className="input-text" 
       value = {search}
       onChange={ (e) => setSearch(e.target.value)} 
-      placeholder="Zadejte obecný název potraviny (np. místo hermelín, zadejte sýr)." />
+      title="Zadejte obecný název potraviny (np. místo hermelín, zadejte sýr)." />
 
       <input 
       type="submit" 

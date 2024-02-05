@@ -48,6 +48,7 @@ input {
     width: 48rem;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     overflow-y: auto;
     margin: 0.5rem 6rem;
     
@@ -73,5 +74,35 @@ input {
     opacity: 0.2;
   }
 
+@media screen and (max-width: 980px){
+    .search-text {
+        width: 45rem;
+        margin: 0;
+    }
+
+    .input-text {
+        width: 25rem;
+    }    
+}
+
+@media screen and (max-width: 730px){
+    .search-text {
+        flex-direction: column;
+        height: 7rem;
+        width: 35rem;
+        
+    }
+  
+
+}
+
+@media screen and (max-width: 570px){
+    .search-text {
+        height: 7rem;
+        width: 30rem;
+        
+    } 
+
+}
 
 
