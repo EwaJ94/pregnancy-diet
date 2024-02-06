@@ -1,5 +1,5 @@
 .search-text {
-    width: 60rem;
+    width: inherit;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

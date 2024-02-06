@@ -1,6 +1,6 @@
 menu {
-    width: 60rem;
-    padding-left: 0;
+    width: inherit;
+    padding: 0;
     margin: 1rem 0 0;
     display: flex;
     
@@ -27,15 +27,16 @@ menu ul li:hover {
 
 @media screen and (max-width: 980px){
     menu ul {
-        width: 50%;
+        width:65%;
     }
-
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 730px){
     menu ul {
-        width: 45%;
+        width: 100%;
+        padding: 0;
     }
-
 }
+
+
 
