@@ -74,3 +74,15 @@ body {
     margin: 0rem 2rem 3rem;
   }
 }
+
+@media screen and (max-width: 500px){
+  .container{
+    width: 25rem;
+    
+  }
+
+  .result {
+    width: 20rem;
+    margin: 0rem 2rem 3rem;
+  }
+}

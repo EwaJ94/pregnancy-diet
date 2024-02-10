@@ -90,19 +90,23 @@ input {
         flex-direction: column;
         height: 7rem;
         width: 35rem;
-        
     }
-  
-
 }
 
 @media screen and (max-width: 570px){
     .search-text {
         height: 7rem;
         width: 30rem;
-        
     } 
-
 }
 
+@media screen and (max-width: 500px){
+    .search-text {
+        width: 25rem;
+    }
+    .input-text {  
+        width: 20rem;
+    }
+
+}
 
