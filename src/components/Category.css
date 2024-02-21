@@ -3,7 +3,6 @@ menu {
     padding: 0;
     margin: 1rem 0 0;
     display: flex;
-    
 }
 
 menu ul {
@@ -25,6 +24,7 @@ menu ul li:hover {
     color: #BF045B;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 980px){
     menu ul {
         width:65%;
@@ -37,7 +37,6 @@ menu ul li:hover {
         padding: 0;
     }
 }
-
 
 
 

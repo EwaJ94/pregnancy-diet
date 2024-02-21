@@ -46,24 +46,25 @@ input {
 
 .search-result{
     width: 48rem;
+    height: 18rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     overflow-y: auto;
     margin: 0.5rem 6rem;
     
 }
 
+
 .search-result h2 {
     color: #26010B;
     text-decoration: underline;
-  }
+}
   
 .search-result p {
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     color: #26010B;
-  }
+}
 
 .pregnant-lady {
     position: absolute;
@@ -72,17 +73,21 @@ input {
     width: 8rem;
     height: 8rem;
     opacity: 0.2;
-  }
+}
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 980px){
     .search-text {
         width: 45rem;
         margin: 0;
     }
-
     .input-text {
         width: 25rem;
     }    
+    .search-result {
+        width: 35rem;
+        margin: 0 5rem;
+    }
 }
 
 @media screen and (max-width: 730px){
@@ -91,22 +96,30 @@ input {
         height: 7rem;
         width: 35rem;
     }
+    .search-result {
+        width: 25rem;
+        margin-left: 4.5rem;
+    }
 }
 
 @media screen and (max-width: 570px){
+    .input-text {
+        width: 20rem;
+    }
     .search-text {
-        height: 7rem;
         width: 30rem;
     } 
+    .search-result {
+        width: 20rem;
+    }
 }
 
 @media screen and (max-width: 500px){
     .search-text {
         width: 25rem;
     }
-    .input-text {  
-        width: 20rem;
+    .search-result {
+        margin-left: 2rem;
     }
-
 }
 

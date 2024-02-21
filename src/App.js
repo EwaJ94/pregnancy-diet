@@ -26,64 +26,82 @@ const App = () => {
   const showDrinks = () => {
     setFoods([])
     setOthers([])
-    const finalDrinks = data.filter((oneDrink) => {
-      return oneDrink.typ.includes("nápoj")
-    })
-    setDrinks(finalDrinks);
+    try {
+      const finalDrinks = data.filter((oneDrink) => {
+        return oneDrink.typ.includes("nápoj")
+      })
+      setDrinks(finalDrinks)
+      }catch(err) {
+        setError(err.message)
+      }
   }
   
   const showFoods = () => {
     setDrinks([])
     setOthers([])
-    const finalFoods = data.filter((oneFood) => {
-      return oneFood.typ.includes("potraviny")
-    })
-    setFoods(finalFoods);
+    try {
+      const finalFoods = data.filter((oneFood) => {
+        return oneFood.typ.includes("potraviny")
+      })
+      setFoods(finalFoods)
+      }catch(err) {
+        setError(err.message)
+      }
   }
   
   const showOthers = () => {
     setDrinks([])
     setFoods([])
-    const finalOthers = data.filter((oneOther) => {
-      return oneOther.typ.includes("ostatní")
-    })
-    setOthers(finalOthers);
+    
+    try {
+      const finalOthers = data.filter((oneOther) => {
+        return oneOther.typ.includes("ostatní")
+      })
+      setOthers(finalOthers)
+      }catch(err) {
+        setError(err.message)
+      }
   }
 
+const removeCategories = () => {
+  setDrinks([])
+  setFoods([])
+  setOthers([])
+}
   return <section className="container"> 
     {error && <p>{error}</p>}
     <Category showDrinks={showDrinks} showFoods={showFoods} showOthers={showOthers}/>
-    <QA data={data}/>
-
-  <div className="result">
-    {drinks.map ( (oneDrink) => {
+    <QA data={data} removeCategories={removeCategories}/>
+    
+    <div className="result">
+      {drinks.map ( (oneDrink) => {
       const {id, název, popis } = oneDrink
 
       return <div key={id} >
-      <h2>{název}</h2>
-      <p>{popis}</p>
-  </div>
-    })}
-    
-    {foods.map ( (oneFood) => {
+        <h2>{název}</h2>
+        <p>{popis}</p>
+      </div>
+      })}
+
+      {foods.map ( (oneFood) => {
       const {id, název, popis } = oneFood
 
       return <div key={id} >
-      <h2>{název}</h2>
-      <p>{popis}</p>
-  </div>
-    })}
-    
-  {others.map ( (oneOther) => {
+        <h2>{název}</h2>
+        <p>{popis}</p>
+      </div>
+      })}
+
+      {others.map ( (oneOther) => {
       const {id, název, popis } = oneOther
 
       return <div key={id} >
-      <h2>{název}</h2>
-      <p>{popis}</p>
-  </div>
-    })}
-    </div>
-  </section>
+        <h2>{název}</h2>
+        <p>{popis}</p>
+      </div>
+      })}
+</div>
+</section>
 }
 
 export default App

@@ -21,6 +21,8 @@ body {
 }
 
 .result {
+  position: absolute;
+  top: 8rem;
   width: 48rem;
   height: 18rem;
   display: flex;
@@ -40,11 +42,11 @@ body {
   color: #26010B;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 980px){
   .container{
     width: 45rem;
   }
-
   .result {
     width: 35rem;
     margin: 0 5rem;
@@ -54,9 +56,7 @@ body {
 @media screen and (max-width: 730px){
   .container{
     width: 35rem;
-    
   }
-
   .result {
     width: 25rem;
     margin: 0.5rem 4.5rem 3rem;
@@ -66,23 +66,17 @@ body {
 @media screen and (max-width: 570px){
   .container{
     width: 30rem;
-    
   }
-
   .result {
-    width: 25rem;
-    margin: 0rem 2rem 3rem;
+    width: 20rem;
   }
 }
 
 @media screen and (max-width: 500px){
   .container{
     width: 25rem;
-    
   }
-
   .result {
-    width: 20rem;
     margin: 0rem 2rem 3rem;
   }
 }

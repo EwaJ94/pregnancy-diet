@@ -2,7 +2,7 @@ import "./QA.css"
 import pregnantlady from "../icons/pregnantlady.png"
 import {useState} from "react"
 
-const QA = ({data}) => {
+const QA = ({data, removeCategories}) => {
   const [search, setSearch] = useState("")
   const [find, setFind] = useState([])
   const [error, setError] = useState("")
@@ -12,7 +12,8 @@ const QA = ({data}) => {
     
     setError("")
     setSearch("")
-    
+    removeCategories()
+
     const findFood = data.filter( (oneFood) => {
       return oneFood.název.toLowerCase().includes(search.toLowerCase())
   })
@@ -27,7 +28,7 @@ const QA = ({data}) => {
   } else {
       return find
   }}
-  
+
   return <div>
     <section className="question">
       <form className="search-text" 
@@ -45,8 +46,8 @@ const QA = ({data}) => {
       value="Hledat" 
       className="find"/>
     </form>
-    
   </section>
+
   <section className="search-result">
     {error}
     {find.map ( (oneFood) => {
@@ -55,12 +56,12 @@ const QA = ({data}) => {
       return <div key={id} >
         <h2>{název}</h2>
         <p>{popis}</p>
-    </div>
-    })}
+      </div>
+      })}
   </section>
-  
-  <img src={pregnantlady} alt="pregnant-lady" className="pregnant-lady"/>
+
+  <img src={pregnantlady} alt="pregnant lady" className="pregnant-lady"/>
 </div>
- 
 }
+
 export default QA
