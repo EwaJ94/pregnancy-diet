@@ -1,66 +1,35 @@
 import "./QA.css"
-import pregnantlady from "../icons/pregnantlady.png"
 import {useState} from "react"
 
-const QA = ({data, removeCategories}) => {
+const QA = ({handleSearch}) => {
   const [search, setSearch] = useState("")
-  const [find, setFind] = useState([])
-  const [error, setError] = useState("")
   
   const formSubmit = (e) => {
     e.preventDefault()
-    
-    setError("")
-    setSearch("")
-    removeCategories()
 
-    const findFood = data.filter( (oneFood) => {
-      return oneFood.název.toLowerCase().includes(search.toLowerCase())
-  })
-  
-    setFind(findFood)
-    
-    if (findFood.length === 0) {
-      setError("Potravina nenalezena, zkuste zadat obecný název.")
-  } else if (search.length === 0){
-      setError("Prosím zadejte hledaný text.")
-      setFind([])
-  } else {
-      return find
-  }}
+    if(search.trim()){
+      handleSearch(search)
+      setSearch("")
+    }
+  }
 
   return <div>
     <section className="question">
-      <form className="search-text" 
+      <form 
+      className="search-text" 
       onSubmit={formSubmit}> 
-
       <input 
       type="text" 
       className="input-text" 
       value = {search}
       onChange={ (e) => setSearch(e.target.value)} 
       title="Zadejte obecný název potraviny (np. místo hermelín, zadejte sýr)." />
-
       <input 
       type="submit" 
       value="Hledat" 
       className="find"/>
     </form>
   </section>
-
-  <section className="search-result">
-    {error}
-    {find.map ( (oneFood) => {
-      const {id,název,popis} = oneFood
-
-      return <div key={id} >
-        <h2>{název}</h2>
-        <p>{popis}</p>
-      </div>
-      })}
-  </section>
-
-  <img src={pregnantlady} alt="pregnant lady" className="pregnant-lady"/>
 </div>
 }
 

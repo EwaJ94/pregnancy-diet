@@ -1,12 +1,12 @@
 import "./Category.css"
 
-const Category = (props) => {
+const Category = ({showDrinks, showFoods, showOthers}) => {
   return <section>
     <menu>
       <ul>
-        <li onClick={props.showDrinks}>Nápoje</li>
-        <li onClick={props.showFoods}>Potraviny</li>
-        <li onClick={props.showOthers}>Ostatní</li>
+        <li onClick={showDrinks}>Nápoje</li>
+        <li onClick={showFoods}>Potraviny</li>
+        <li onClick={showOthers}>Ostatní</li>
       </ul>
     </menu>
 </section>
