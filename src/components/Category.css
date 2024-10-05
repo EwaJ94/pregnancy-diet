@@ -24,19 +24,21 @@ menu ul li:hover {
     color: #BF045B;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 980px){
+@media screen and (max-width: 1080px){
     menu ul {
         width:65%;
     }
 }
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 850px){
     menu ul {
-        width: 100%;
+        width: 75%;
         padding: 0;
     }
 }
 
-
-
+@media screen and (max-width: 680px){
+    menu ul {
+        width: 100%;
+    }
+}

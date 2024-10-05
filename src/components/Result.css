@@ -27,28 +27,61 @@
     color: #26010B;
 }
 
-@media screen and (max-width: 980px){
+@media screen and (max-width: 1320px){
     .result {
-        width: 35rem;
-        margin: 0 5rem;
+        width: 48rem;
     }
 }
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 1080px){
     .result {
-        width: 25rem;
+        width: 40rem;
         margin: 0.5rem 4.5rem 3rem;
     }
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 850px){
+    .error-message {
+        font-size: 0.8rem;
+    }
+
     .result {
-        width: 20rem;
+        width: 30rem;
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 680px){
+    .error-message {
+       width: 20rem;
+    }
+
     .result {
-        margin: 0rem 2rem 3rem;
+        width: 26rem;
+        height: 33rem;
+        margin-left: 2rem;
+    }
+
+    .result h2 {
+        font-size: 1.2rem;
+    }
+
+    .result p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .error-message {
+       width: 18rem;
+    }
+
+    .result {
+        width: 21rem;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .result {
+        width: 16rem;
     }
 }

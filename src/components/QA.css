@@ -44,52 +44,51 @@ input {
     border: 0.2rem solid #BF045B;
 }
 
+@media screen and (max-width: 1320px){
+    .input-text {
+        width: 35rem;
+    }    
+}
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 980px){
-    .search-text {
-        width: 45rem;
-        margin: 0;
-    }
+@media screen and (max-width: 1080px){
     .input-text {
         width: 25rem;
-    }    
-    .search-result {
-        width: 35rem;
-        margin: 0 5rem;
     }
 }
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 850px){
+    .input-text {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 680px){
     .search-text {
         flex-direction: column;
+        justify-content: space-around;
         height: 7rem;
-        width: 35rem;
+        margin-bottom: 0;
     }
-    .search-result {
-        width: 25rem;
-        margin-left: 4.5rem;
-    }
-}
 
-@media screen and (max-width: 570px){
     .input-text {
-        width: 20rem;
+        height: 2rem;
     }
-    .search-text {
-        width: 30rem;
-    } 
-    .search-result {
-        width: 20rem;
+
+    .find {
+        height: 2.2rem;
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 440px){
     .search-text {
-        width: 25rem;
+        width: 100%;
     }
-    .search-result {
-        margin-left: 2rem;
+
+    .input-text {
+        width: 16rem;
+    }
+
+    .find {
+        height: 2rem;
     }
 }
-
