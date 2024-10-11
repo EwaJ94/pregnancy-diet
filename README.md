@@ -1,5 +1,5 @@
 # Pregnancy diet - food and drink finder for the pregnant woman
-This is a React-based web application that helps pregnant women check the safety of various foods, drinks, and other products. 
+React-based web application helps pregnant women check the safety of various foods, drinks, and other products. 
 The app retrieves data from a Firebase Firestore database and allows users to filter items based on category or search for specific food and drink items.
 
 ## Features
