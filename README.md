@@ -3,10 +3,10 @@ React-based web application helps pregnant women check the safety of various foo
 The app retrieves data from a Firebase Firestore database and allows users to filter items based on category or search for specific food and drink items.
 
 ## Features
-* Category-based filtering: Users can select specific categories like "Drinks", "Foods", or "Others" to see relevant items.
-* Search functionality: Users can search for specific items by name.
-* Dynamic data rendering: The app fetches real-time data from Firestore and displays it based on user interactions.
-* Error handling: If no item is found, or if the search is empty, the app will display appropriate error messages.
+* By category-based filtering, users can select specific categories like "Drinks", "Foods", or "Others" to see relevant items.
+* Users can search for specific items by name.
+* The app fetches real-time data from Firestore and displays it based on user interactions.
+* If no item is found, or if the search is empty, the app will display appropriate error messages.
   
 ## Installation
 #### 1. Clone the repository:
