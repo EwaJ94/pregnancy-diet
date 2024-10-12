@@ -6,7 +6,7 @@ The app retrieves data from a Firebase Firestore database and allows users to fi
 * By category-based filtering, users can select specific categories like "Drinks", "Foods", or "Others" to see relevant items.
 * Users can search for specific items by name.
 * The app fetches real-time data from Firestore and displays it based on user interactions.
-* If no item is found, or if the search is empty, the app will display appropriate error messages.
+* If no item is found or the search is empty, the app will display appropriate error messages.
   
 ## Installation
 #### 1. Clone the repository:
@@ -20,8 +20,8 @@ Make sure you have Node.js installed. Then run:<br>
 #### 3. Firebase setup:
 Create a Firebase project in the Firebase Console.
 
-Enable Firestore database.
-Add your Firebase configuration file (config.js) inside the firebase folder with your Firebase project details.
+Enable the Firestore database. 
+Add your Firebase configuration file (config.js) to the Firebase folder with your Firebase project details.
 
 #### 4. Run the development server: 
 `npm start`
