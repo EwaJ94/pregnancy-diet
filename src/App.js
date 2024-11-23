@@ -29,7 +29,7 @@ const App = () => {
     })
 }, [])
 
-  const resetResults = () =>{
+  const resetResults = () => {
     setDrinks([])
     setFoods([])
     setOthers([])
