@@ -1,8 +1,6 @@
-import "./QA.css"
-import {useState} from "react"
+import "./Search.css"
 
-const QA = ({handleSearch}) => {
-  const [search, setSearch] = useState("")
+const Search = ({handleSearch, search, setSearch}) => {
   
   const formSubmit = (e) => {
     e.preventDefault()
@@ -13,7 +11,7 @@ const QA = ({handleSearch}) => {
     }
   }
 
-  return <div>
+  return <>
     <section className="question">
       <form 
       className="search-text" 
@@ -30,7 +28,7 @@ const QA = ({handleSearch}) => {
       className="find"/>
     </form>
   </section>
-</div>
+</>
 }
 
-export default QA
+export default Search

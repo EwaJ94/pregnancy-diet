@@ -1,5 +1,5 @@
 import Category from "./components/Category"
-import QA from "./components/QA"
+import Search from "./components/Search"
 import Result from "./components/Result"
 import projectFirestore from "./firebase/config"
 import {useState, useEffect} from "react"
@@ -94,7 +94,7 @@ const App = () => {
     showDrinks={showDrinks} 
     showFoods={showFoods} 
     showOthers={showOthers}/>
-    <QA handleSearch={handleSearch}/>
+    <Search handleSearch={handleSearch} search={search} setSearch={setSearch}/>
     <Result 
     drinks={drinks} 
     foods={foods} 
